@@ -1,5 +1,6 @@
 ﻿from math import *
 from random import *
+
 #0
 
 #while True:
@@ -140,16 +141,41 @@ from random import *
 #    except:    
 #         print("")
 
+
+
+
+snäkid = ["Kartulikrõpsud", "Šokolaadikommid", "Närimiskumm", "Küpsised"]
+hind = [1.50, 0.75, 0.50, 1.00]
+
+kokku = 0
+
+while True:
+    print("Tere tulemast see snäk masin")
+    print("Palun valige snack:")
+    for i, snäk in enumerate(snäkid):
+        print(f"{i + 1}: {snäk} - €{hind[i]}")
+    valik = int(input("Sisesta oma valik (1-4): "))
+    if valik == 0:
+        break
+    if valik > 0 and valik <= len(snäkid):
+        snäk = snäkid[valik - 1]
+        kulud = hind[valik - 1]
+        kokku += kulud
+        print(f"Naudi oma {snäk}! Teie kogusumma on €{kokku}")
+    else:
+        print("Vigane valik. Proovi uuesti.")
+    break
+
+
+
+
 #20 1 valik
 
 #print("Sa pead sisestama 4 numbrit ja neist programm valib kõige suurema ja kõige väiksema")
-
-#for i in range (1):
-
-#    num1 = float(input("Sisesta esimene number: "))
-#    num2 = float(input("Sisesta teine number: "))
-#    num3 = float(input("Sisesta kolmas number: "))
-#    num4 = float(input("Sisesta neljas number: "))
+#num1 = float(input("Sisesta esimene number: "))
+#num2 = float(input("Sisesta teine number: "))
+#num3 = float(input("Sisesta kolmas number: "))
+#num4 = float(input("Sisesta neljas number: "))
 
 #nums = [num1, num2, num3, num4]
 
@@ -157,37 +183,34 @@ from random import *
 #print("Väikseim arv on: ", min(nums))
 
 
-#20 2 valik
 
-#print("Sa pead sisestama 4 numbrit ja neist programm valib kõige suurema ja kõige väiksema")
+
+#20
+
+
+#numbers = []
+
+#for i in range(4):
+#    num = int(input("Sisesta number {}: ".format(i + 1)))
+#    numbers.append(num)
+
+#print("Kõige rohkem on: ", max(numbers))
+#print()
+#print("Väikseim arv on: ", min(numbers))
+
+#20 2
 
 
 #while True:
+#  numbers = []
+#  print("Sisesta number:")
+#  for i in range(4):
+#    number = int(input())
+#    numbers.append(number)
 
-#    num1 = float(input("Sisesta esimene number: "))
-#    num2 = float(input("Sisesta teine number: "))
-#    num3 = float(input("Sisesta kolmas number: "))
-#    num4 = float(input("Sisesta neljas number: "))
-
-#    nums = [num1, num2, num3, num4]
-
-#    print("Kõige rohkem on: ", max(nums))
-#    print("Väikseim arv on: ", min(nums))
-#    break
-
-#20 3 valik 
-
-print("Sa pead sisestama 4 numbrit ja neist programm valib kõige suurema ja kõige väiksema")
-
-
-
-while nums<4:
-    num1 = float(input("Sisesta esimene number: "))
-    num2 = float(input("Sisesta teine number: "))
-    num3 = float(input("Sisesta kolmas number: "))
-    num4 = float(input("Sisesta neljas number: "))
-
-    nums = [num1, num2, num3, num4]
-
-    print("Kõige rohkem on: ", max(nums))
-    print("Väikseim arv on: ", min(nums))
+#  rohkem = max(numbers)
+#  väiksem = min(numbers)
+#  print("Kõige rohkem on: ", rohkem)
+#  print("Väikseim arv on: ", väiksem)
+#  break
+    
